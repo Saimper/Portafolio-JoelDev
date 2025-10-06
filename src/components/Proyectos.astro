@@ -1,0 +1,218 @@
+---
+import ProjectCard from './ProjectCard.jsx';
+
+const projects = [
+  {
+    id: 1,
+    title: "Sistema de Gestión de Tienda",
+    description: "Plataforma completa de gestión con módulos de inventario, productos, empleados, usuarios, contabilidad",
+    tech: ["Laravel", "Php","Filament", "MySql"],
+    category: "Full-Stack",
+    image: "/Tienda-Web.webp",
+    color: "#00ff88",
+    demoLink: "https://github.com/Saimper/Tienda-Web.git",
+    githubLink: "https://github.com/Saimper/Tienda-Web.git"
+  },
+  {
+    id: 2,
+    title: "Sistema Mesa de ayuda",
+    description: "Sistema de tickets para gestion de solicitudes dentro de una empresa.",
+    tech: ["Laravel", "MySQL", "Filament", "Php"],
+    category: "Full-Stack",
+    image: "/ProjectHelpDesk.webp",
+    color: "#ff0055",
+    demoLink: "https://github.com/Saimper/Help-Desk.git",
+    githubLink: "https://github.com/Saimper/Help-Desk.git"
+  },
+  {
+    id: 3,
+    title: "Landing page Clinica Veterinaria",
+    description: "Proyecto personal para clinica veterinaria con diferentes secciones y boton de agendamiento de citas.",
+    tech: ["React", "Astro", "JavaScript", "Node.js", "Tailwind", "CSS"],
+    category: "Frontend",
+    image: "/Puppy-Life.webp",
+    color: "#61DAFB",
+    demoLink: "https://github.com/Saimper/Puppy-Life.git",
+    githubLink: "https://github.com/Saimper/Puppy-Life.git"
+  },
+  {
+    id: 4,
+    title: "Sistema de Logistica para empresa de exportaciones",
+    description: "Este sistema es una adecuacion de un sistem hecho en laravel, el cliente solicito hacer la migracion a .NET Web Forms. todos los modulos del panel administrativo",
+    tech: ["ASP.NET", "C#", "SQL Server"],
+    category: "Backend",
+    image: "/AselLogistica.webp",
+    color: "#512BD4",
+   
+  },
+  {
+    id: 5,
+    title: "Sistema Gestion de Biblioteca",
+    description: "Este es un proyecto personal que partió de una necesidad que se presentaba en mi universidad, ya que no se contaba con un sistema para gestionar todos los procesos dentro de la bilioteca. Fue presentado como plan de proyecto y avalado.",
+    tech: ["Node.js", "Boostrap", "JavaScript", "Next.js", "MySql"],
+    category: "Full-Stack",
+    image: "/Biblioteca.webp",
+    color: "#FF2D20",
+    demoLink: "https://github.com/Saimper/Biblioteca.git",
+    githubLink: "https://github.com/Saimper/Biblioteca.git"
+  },
+  {
+    id: 6,
+    title: "E-commerce Sound-Check",
+    description: "Proyecto personal",
+    tech: ["CSS", "Tailwind", "JavaScript", "Node.js", "Next.js"],
+    category: "Frontend",
+    image: "/Sound.webp",
+    color: "#00ff88",
+    demoLink: "https://github.com/Saimper/Sound-Check.git",
+    githubLink: "https://github.com/Saimper/Sound-Check.git"
+  }
+];
+
+const categories = ["Todos", "Full-Stack", "Backend", "Frontend"];
+---
+
+<section id="proyectos" class="relative min-h-screen py-32 px-4 overflow-hidden">
+  <div class="absolute top-1/4 left-10 w-[600px] h-[600px] bg-[#00ff88]/5 rounded-full blur-[150px] animate-pulse-slow"></div>
+  <div class="absolute bottom-1/4 right-10 w-[600px] h-[600px] bg-[#ff0055]/5 rounded-full blur-[150px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    
+    <div class="mb-20 text-center animate-fade-up">
+      <div class="inline-block relative mb-6">
+        <span class="text-[180px] md:text-[280px] font-black text-transparent bg-clip-text bg-gradient-to-b from-[#00ff88]/20 to-transparent leading-none select-none">
+          02
+        </span>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h2 class="text-4xl md:text-6xl font-black text-zinc-100">
+            Proyectos <span class="neon-text">Destacados</span>
+          </h2>
+        </div>
+      </div>
+      
+      <p class="text-zinc-400 text-lg max-w-2xl mx-auto mb-12">
+        Una selección de proyectos que demuestran mi experiencia en desarrollo full-stack
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        {categories.map((cat, index) => (
+          <button
+            data-filter={cat}
+            class={`filter-btn px-6 py-3 rounded-full font-mono text-sm transition-all duration-300 ${
+              index === 0 
+                ? 'bg-[#00ff88] text-zinc-900 shadow-[0_0_20px_rgba(0,255,136,0.3)]' 
+                : 'bg-zinc-800/50 text-zinc-400 border border-zinc-700/50 hover:border-[#00ff88]/30 hover:text-[#00ff88]'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="projects-grid">
+      {projects.map((project, index) => (
+        <ProjectCard client:load project={project} index={index} />
+      ))}
+    </div>
+
+    <div class="mt-24 text-center animate-fade-up delay-500">
+      <div class="bento-card inline-block p-12 max-w-2xl">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <div class="w-3 h-3 rounded-full bg-[#00ff88] animate-pulse"></div>
+          <span class="text-sm font-mono text-zinc-400 uppercase tracking-wider">¿Tienes un proyecto en mente?</span>
+        </div>
+        
+        <h3 class="text-3xl md:text-4xl font-black text-zinc-100 mb-6">
+          Trabajemos <span class="neon-text">Juntos</span>
+        </h3>
+        
+        <p class="text-zinc-400 mb-8 leading-relaxed">
+          Estoy disponible para proyectos freelance. Transformemos tu idea en realidad digital.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contacto" class="btn-primary group">
+            <span class="flex items-center justify-center gap-2">
+              Iniciar Proyecto
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/src/assets/Joel_Solano.pdf" download="Mi_CV.pdf"class="btn-secondary group">
+            <span class="flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Ver CV Completo
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+  }
+
+  #projects-grid {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('[data-category]');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-[#00ff88]', 'text-zinc-900', 'shadow-[0_0_20px_rgba(0,255,136,0.3)]');
+          b.classList.add('bg-zinc-800/50', 'text-zinc-400', 'border', 'border-zinc-700/50');
+        });
+        
+        btn.classList.remove('bg-zinc-800/50', 'text-zinc-400', 'border', 'border-zinc-700/50');
+        btn.classList.add('bg-[#00ff88]', 'text-zinc-900', 'shadow-[0_0_20px_rgba(0,255,136,0.3)]');
+
+        projectCards.forEach(card => {
+          const htmlCard = card as HTMLElement;
+          const category = htmlCard.getAttribute('data-category');
+          
+          if (filter === 'Todos' || category === filter) {
+            htmlCard.style.display = 'block';
+            setTimeout(() => {
+              htmlCard.style.opacity = '1';
+              htmlCard.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            htmlCard.style.opacity = '0';
+            htmlCard.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              htmlCard.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  });
+</script>

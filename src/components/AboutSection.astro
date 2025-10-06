@@ -1,0 +1,262 @@
+---
+// AboutSection.astro
+---
+
+<section id="sobre-mi" class="relative min-h-screen py-20 px-4 overflow-hidden">
+  <!-- Efectos de fondo -->
+  <div class="absolute top-40 right-20 w-[400px] h-[400px] bg-[#00ff88]/5 rounded-full blur-[100px]"></div>
+  <div class="absolute bottom-40 left-20 w-[400px] h-[400px] bg-[#ff0055]/5 rounded-full blur-[100px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    
+    <!-- Header de la Sección -->
+    <div class="mb-20 text-center animate-fade-up">
+      <div class="inline-block relative mb-6">
+        <span class="text-[180px] md:text-[280px] font-black text-transparent bg-clip-text bg-gradient-to-b from-[#00ff88]/20 to-transparent leading-none select-none">
+          01
+        </span>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h2 class="text-4xl md:text-6xl font-black text-zinc-100">
+            Sobre <span class="neon-text">Mí</span>
+          </h2>
+        </div>
+      </div>
+      
+      <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+        Un vistazo a mi trayectoria y lo que me apasiona del desarrollo web
+      </p>
+    </div>
+
+    <!-- Grid Principal -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- Columna Izquierda - Historia y Filosofía -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Tarjeta Principal - Mi Historia -->
+        <div class="bento-card animate-fade-up p-8">
+          <h3 class="text-2xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </span>
+            Mi Trayectoria
+          </h3>
+          
+          <div class="space-y-4 text-zinc-300 leading-relaxed">
+            <p>
+              Comencé mi camino en el desarrollo web hace más de dos años, descubriendo mi pasión por crear soluciones digitales que realmente impactan. Mi experiencia abarca tanto el <strong class="text-[#00ff88]">backend</strong> como el <strong class="text-[#00ff88]">frontend</strong>, lo que me permite tener una visión completa de cada proyecto.
+            </p>
+            
+            <p>
+              He tenido la oportunidad de trabajar en empresas donde desempeñé roles como <strong class="text-zinc-100">tester de software</strong>, experiencia que me enseñó la importancia de la calidad, el detalle y la empatía con el usuario final. Esta perspectiva me hace un desarrollador más completo y consciente.
+            </p>
+            
+            <p>
+              Durante el último año como <strong class="text-[#00ff88]">freelancer</strong>, he expandido mi stack técnico trabajando con tecnologías como .NET, C#, ASP.NET y SQL Server, desarrollando soluciones robustas para diversos clientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Filosofía -->
+        <div class="bento-card animate-fade-up delay-100 p-8 border-l-4 border-[#ff0055]">
+          <h3 class="text-xl font-bold text-zinc-100 mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-[#ff0055]/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#ff0055]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </span>
+            Mi Filosofía
+          </h3>
+          
+          <p class="text-zinc-300 leading-relaxed">
+            No me ato a una sola tecnología. El mundo del desarrollo web evoluciona constantemente, y yo evoluciono con él. Mi enfoque es <strong class="text-zinc-100">aprender continuamente</strong>, adaptarme a nuevos desafíos y usar las herramientas adecuadas para cada problema. La flexibilidad y la curiosidad son mi ventaja competitiva.
+          </p>
+        </div>
+
+        <!-- Grid de Valores -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-up delay-200">
+          
+          <div class="bento-card p-6 group hover:border-[#00ff88]/30 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-zinc-100 mb-2">Adaptabilidad</h4>
+            <p class="text-sm text-zinc-400">
+              Me ajusto rápidamente a nuevas tecnologías y metodologías de trabajo.
+            </p>
+          </div>
+
+          <div class="bento-card p-6 group hover:border-[#00ff88]/30 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-zinc-100 mb-2">Aprendizaje Continuo</h4>
+            <p class="text-sm text-zinc-400">
+              Siempre buscando expandir mis conocimientos y habilidades.
+            </p>
+          </div>
+
+          <div class="bento-card p-6 group hover:border-[#00ff88]/30 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-zinc-100 mb-2">Código Limpio</h4>
+            <p class="text-sm text-zinc-400">
+              Priorizo la mantenibilidad y escalabilidad en cada línea de código.
+            </p>
+          </div>
+
+          <div class="bento-card p-6 group hover:border-[#00ff88]/30 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-[#00ff88]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-zinc-100 mb-2">Enfoque en el Usuario</h4>
+            <p class="text-sm text-zinc-400">
+              Desarrollo pensando siempre en la experiencia del usuario final.
+            </p>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <!-- Columna Derecha - Skills y Experiencia -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <!-- Skills por Categoría -->
+        <div class="bento-card animate-slide-left p-8">
+          <h3 class="text-xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-[#00ff88]/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+            </span>
+            Stack Técnico
+          </h3>
+
+          <div class="space-y-6">
+            
+            <!-- Backend -->
+            <div>
+              <h4 class="text-sm font-mono text-[#00ff88] mb-3 uppercase tracking-wider">Backend</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">.NET</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">ASP.NET</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">SQL Server</span>
+                <span class="skill-tag">MySQL</span>
+              </div>
+            </div>
+
+            <!-- Frontend -->
+            <div>
+              <h4 class="text-sm font-mono text-[#ff0055] mb-3 uppercase tracking-wider">Frontend</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Astro</span>
+              </div>
+            </div>
+
+            <!-- Herramientas -->
+            <div>
+              <h4 class="text-sm font-mono text-[#61DAFB] mb-3 uppercase tracking-wider">Herramientas & Otros</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Testing</span>
+                <span class="skill-tag">API REST</span>
+                <span class="skill-tag">Responsive Design</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Timeline Rápido -->
+        <div class="bento-card animate-slide-left delay-100 p-8">
+          <h3 class="text-xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-[#ff0055]/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#ff0055]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </span>
+            Experiencia
+          </h3>
+
+          <div class="space-y-6">
+            
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-8 border-l-2 border-[#00ff88]">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#00ff88] border-4 border-zinc-900"></div>
+              <div class="text-xs font-mono text-[#00ff88] mb-1">2024 - Presente</div>
+              <h4 class="text-lg font-bold text-zinc-100 mb-2">Desarrollador Freelance</h4>
+              <p class="text-sm text-zinc-400">
+                Desarrollo de aplicaciones web con .NET, C#, ASP.NET y SQL Server para diversos clientes.
+              </p>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-8 border-l-2 border-zinc-700">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-700 border-4 border-zinc-900"></div>
+              <div class="text-xs font-mono text-zinc-500 mb-1">2023</div>
+              <h4 class="text-lg font-bold text-zinc-100 mb-2">Tester de Software</h4>
+              <p class="text-sm text-zinc-400">
+                Testing y QA de aplicaciones web. Trabajo con PHP, Laravel y MySQL.
+              </p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-8">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-700 border-4 border-zinc-900"></div>
+              <div class="text-xs font-mono text-zinc-500 mb-1">Proyectos Personales</div>
+              <h4 class="text-lg font-bold text-zinc-100 mb-2">Aprendizaje Continuo</h4>
+              <p class="text-sm text-zinc-400">
+                Desarrollo de proyectos propios para explorar nuevas tecnologías y metodologías.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="bento-card animate-slide-left delay-200 p-8 bg-gradient-to-br from-[#00ff88]/5 to-transparent border-[#00ff88]/20">
+          <h3 class="text-xl font-bold text-zinc-100 mb-3">¿Trabajamos juntos?</h3>
+          <p class="text-sm text-zinc-400 mb-6">
+            Siempre abierto a nuevos proyectos y colaboraciones interesantes.
+          </p>
+          <a href="#contacto" class="btn-primary inline-flex items-center gap-2 text-sm">
+            Hablemos
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .skill-tag {
+    @apply px-3 py-1.5 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-xs font-mono text-zinc-300 hover:border-[#00ff88]/30 hover:text-[#00ff88] transition-all cursor-default;
+  }
+</style>
